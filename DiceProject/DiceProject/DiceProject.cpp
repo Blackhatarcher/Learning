@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "Dice.cpp"
+#include "Dice.h"
 #include <iostream>
 using namespace std;
 

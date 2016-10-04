@@ -1,11 +1,7 @@
 #include "Dice.h"
 
-Dice::Dice(int x)
-{
-	sides = x;
-}
 int Dice::Roll() {
-	return 0;
+	return sides;
 }
 int Dice::GetRolls() {
 	return 0;
@@ -13,4 +9,9 @@ int Dice::GetRolls() {
 int Dice::GetSides() {
 	return 0;
 }
+Dice::Dice(int x)
+{
+	sides = x;
+}
+
 
