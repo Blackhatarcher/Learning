@@ -1,10 +1,22 @@
-// Pointers.cpp : Defines the entry point for the console application.
+﻿// Pointers.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
 #include <iostream>
 using namespace std;
 
+class Person {
+private:
+	string name;
+	int age;
+public:​
+	Person(){ name = "George Whitworth"; age = 198; }​
+	Person(string n, int a){ name = n; age = a; }​
+	​
+	string getName(){ return name;}​
+	int getAge(){ return age;}​
+	void birthday(){ age++;}​
+};
 
 int main()
 {
@@ -26,12 +38,6 @@ int main()
 		int *x = new int;
 		
 		cout << *x << " Is at address " << x << endl;
-		cout << *x << " Is at address " << x << endl;
-		cout << *x << " Is at address " << x << endl;
-		cout << *x << " Is at address " << x << endl;
-		cout << *x << " Is at address " << x << endl;
-
-
 		delete x;
 
 		const int SIZE = 4;
@@ -43,6 +49,14 @@ int main()
 			cout << "in memory" << endl;
 		}
 		
+		Person p;
+		cout <<"Name: " << p.getName() << ", age: " << p.getAge() << endl;
+		cout <<"Happy Birthday " << p.getName() << "!";
+		p.birthday();
+		cout << " You're now " << p.getAge() << " years old!\n\n";
+	
+
+
 		cout << " " << endl;
 		cout << "Press 1 to close" << endl;
 		int answer = 0;
